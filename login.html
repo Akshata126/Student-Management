@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student login</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/reg.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    
+            body{
+                
+                background-image: url("img/back2.jpg");
+                background-size: 100%;
+                background-repeat: no repeat;
+            }
+            #regmr{
+    margin-left: 50px;
+}
+            h2{
+                text-align: center;
+    color: whitesmoke;
+    padding: 20px;
+    
+    margin-top: 40px;
+    font-family: 'Times New Roman';
+}
+            /*table{
+                border:1px solid white
+            }*/
+ .lb{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-style: normal;
+
+}
+.regLGFrm{
+    background-color: #2d85b0;
+    width: 500px;
+    height: 200px;
+    margin: 0px 0px 0px 450px;
+    color: white;
+    font-size: 16px;
+    padding:20px;
+    border-radius:10px ;
+}
+#name1{
+    width: 230px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+    margin-top: 5px;
+    font-family:Times New Roman;
+    font-size: 16px;
+    
+}
+#btn{
+    width: 150px;
+    height: 35px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    font-weight: 600;
+    outline:0;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-right: 10px;
+    
+}
+.container-fluid .sidebar{
+position:fixed;
+height: 100%;
+width:15%;
+margin-left:5px;}
+.side{
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px;
+    size: 14px;
+    margin-top: 30px;
+    font-family: 'Times New Roman';
+}
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" style="height: 40px;">
+                <a href="#" class="navbar-brand text-warning font-weight-bold">
+                AaryasTech Solution
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#colButton">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-center" id="colButton">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="home" class="nav-link text-white">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about_us" class="nav-link text-white">About Us</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="contactus.html" class="nav-link text-white">Contact us</a>
+                        </li><li class="nav-item dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                login
+                              </button>
+                            <a href="login.html" class="nav-link text-white ">Login</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                                
+                        </li>
+                    </ul>
+                </div>
+               
+            </nav>
+        </div>
+        
+        <h2 >Student Login</h2>
+        <div class="regLGFrm login-form">
+        <form method="POST" action="auth" id="regmr" name="registration" onsubmit=" return validReg();">
+            
+<table>
+    
+    <tr>
+        <td><lable class="lb">Student Name</lable></td>
+        <td><input type="text"  name="eid" id="name1" placeholder="Enter Student Name"></td>
+    </tr>
+    <tr>
+        <td><lable class="lb">Password</lable></td>
+        <td><input type="password" name="pass" id="name1" placeholder="Enter Password"></td>
+    </tr>
+    
+    <tr>
+        <td><input type="submit" id="btn" value="Login"></td>
+        <td><input type="reset" value="cancle" id="btn"></td>
+    </tr> 
+</table>
+</form>
+</div>
+    </body>
+</html>
+

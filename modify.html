@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Registration</title>
+       <link rel="stylesheet" type="text/css" href="css/reg.css">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!--<script type="text/javascript" src="registration.js"></script>-->
+        <style>
+            body{
+                
+                background-image: url("img/back2.jpg");
+                background-size: 100%;
+                background-repeat: no repeat;
+            }
+            h2{
+                text-align: center;
+    color: whitesmoke;
+    padding: 20px;
+    size: 14px;
+    margin-top: 40px;
+    font-family: 'Times New Roman';
+}
+            
+        </style>
+    </head>
+
+    <body>
+        <body>
+            <div>
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" style="height: 40px;">
+                    <a href="#" class="navbar-brand text-warning font-weight-bold">
+                    AaryasTech Solution
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#colButton">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse text-center" id="colButton">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a href="home" class="nav-link text-white">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about_us" class="nav-link text-white">About Us</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="contactus.html" class="nav-link text-white">Contact us</a>
+                            </li><li class="nav-item">
+                                <a href="login.html" class="nav-link text-white">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                   
+                </nav>
+            </div>
+        <h2 >Student Mdification Form</h2>
+        <div class="regFrmmodi">
+        <form method="POST"  action="updatedata" id="regmr" name="registration" onsubmit=" return validReg();">
+            
+<table>
+    
+    <tr>
+        <td><lable class="lb">Student ID</lable></td>
+        <td><input type="text"  name="sid" id="name" placeholder="Enter Student ID"></td>
+    </tr>
+    <tr>
+        <td><lable class="lb">Student Name</lable></td>
+        <td><input type="text" name="sname" id="name" placeholder="Enter Student Name"></td>
+    
+    </tr>
+
+    <tr>
+        <td><lable class="lb">Address</lable></td>
+        <td><input type="text" name="addr" id="name" placeholder="Enter Address"></td>
+    
+    </tr>
+    <tr>
+        <td><lable class="lb">Zip Code</lable></td>
+        <td><input type="text" name="zip" id="name" placeholder="Enter Zip Code"></td>
+    
+    </tr>
+    <tr>
+        <td><lable class="lb">EmailID</lable></td>
+        <td><input type="text" name="email" id="name" placeholder="Enter Student Email"></td>
+    
+    </tr>
+    <tr>
+        <td><lable class="lb">Mobile No.</lable></td>
+        <td><input type="text" name="mno" id="name" placeholder="Enter Mob No."></td>
+    
+    </tr>
+    
+    <tr>
+        <td><input type="submit" id="btn" value="Modify"></td>
+        <td><input type="reset" value="Reset" id="btn"></td>
+    </tr> 
+</table>
+</form>
+</div>
+    </body>
+</html>

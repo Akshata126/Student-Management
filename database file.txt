@@ -1,0 +1,400 @@
+Microsoft Windows [Version 10.0.18363.418]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\ashus>C:\xampp\mysql\bin;
+'C:\xampp\mysql\bin' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ashus>cd C:\xampp\mysql\bin;
+The system cannot find the path specified.
+
+C:\Users\ashus>cd
+C:\Users\ashus
+
+C:\Users\ashus>cd C:\xampp\mysql\bin
+
+C:\xampp\mysql\bin>mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.11-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show dvs;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dvs' at line 1
+MariaDB [(none)]> show dbs;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dbs' at line 1
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.275 sec)
+
+MariaDB [(none)]> mysql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mysql' at line 1
+MariaDB [(none)]> use mysql;
+Database changed
+MariaDB [mysql]> show tables;\
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| column_stats              |
+| columns_priv              |
+| db                        |
+| event                     |
+| func                      |
+| general_log               |
+| global_priv               |
+| gtid_slave_pos            |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| index_stats               |
+| innodb_index_stats        |
+| innodb_table_stats        |
+| plugin                    |
+| proc                      |
+| procs_priv                |
+| proxies_priv              |
+| roles_mapping             |
+| servers                   |
+| slow_log                  |
+| table_stats               |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| transaction_registry      |
+| user                      |
++---------------------------+
+31 rows in set (0.003 sec)
+
+MariaDB [mysql]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+5 rows in set (0.001 sec)
+
+MariaDB [mysql]>
+MariaDB [mysql]>
+MariaDB [mysql]> create database myweb
+    -> ;
+Query OK, 1 row affected (0.885 sec)
+
+MariaDB [mysql]> use myweb;
+Database changed
+MariaDB [myweb]> create table loginfo(id int auto_increment not null,
+    -> username varchar(20),
+    -> password varchar(20),
+    -> primary key(id));
+Query OK, 0 rows affected (2.371 sec)
+
+MariaDB [myweb]> insert into loginfo values(1,'akshata','Akshata');
+Query OK, 1 row affected (0.731 sec)
+
+MariaDB [myweb]> select*from loginfo;
++----+----------+----------+
+| id | username | password |
++----+----------+----------+
+|  1 | akshata  | Akshata  |
++----+----------+----------+
+1 row in set (0.253 sec)
+
+MariaDB [myweb]> create table contactFrm(name varchar(20),
+    -> email varchar(20),
+    -> mno int,msg varchar(100));
+Query OK, 0 rows affected (3.478 sec)
+
+MariaDB [myweb]> select*from contactFrm;
++------+----------------------+------------+--------+
+| name | email                | mno        | msg    |
++------+----------------------+------------+--------+
+| ashu | ashu.sanas12@gmail.c | 2147483647 | hghgds |
++------+----------------------+------------+--------+
+1 row in set (0.061 sec)
+
+MariaDB [myweb]> create table studreg(id int auto_increment not null,sname varchar(20) not null,
+    -> addr varchar(20) not null,
+    -> zip varchar(20) not null,
+    -> email varchar(20),
+    -> mno int not null,
+    -> city varchar(20) not null,
+    -> state varchar(20) not null,
+    -> country varchar(20) not null,
+    -> gender varchar(20) not null,
+    -> dob date not null,
+    -> quali varchar(20) not null,
+    -> course varchar(20) not null,
+    -> primary key(id));
+Query OK, 0 rows affected (0.987 sec)
+
+MariaDB [myweb]> select*from studreg;
++----+---------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+| id | sname   | addr   | zip    | email                | mno        | city        | state       | country | gender | dob        | quali | course    |
++----+---------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+|  1 | akshata | satara | 415002 | ashu.sanas12@gmail.c | 2147483647 | Navi mumbai | Maharashtra | Default | female | 2021-08-27 | ME    | Fullstack |
++----+---------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+1 row in set (0.046 sec)
+
+MariaDB [myweb]> select*from studreg;
++----+-------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+| id | sname | addr   | zip    | email                | mno        | city        | state       | country | gender | dob        | quali | course    |
++----+-------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+|  1 | Aarya | satara | 415002 | ashu.sanas12@gmail.c | 2147483647 | Navi mumbai | Maharashtra | Default | female | 2021-08-27 | ME    | Fullstack |
++----+-------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+1 row in set (0.006 sec)
+
+MariaDB [myweb]> Microsoft Windows [Version 10.0.18363.418]
+    -> (c) 2019 Microsoft Corporation. All rights reserved.
+    ->
+    -> C:\Users\ashus>C:\xampp\mysql\bin;
+ERROR: Unknown command '\U'.
+ERROR: Unknown command '\a'.
+ERROR: Unknown command '\x'.
+ERROR: Unknown command '\m'.
+ERROR: Unknown command '\b'.
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Microsoft Windows [Version 10.0.18363.418]
+(c) 2019 Microsoft Corporation. All r' at line 1
+MariaDB [myweb]> 'C:\xampp\mysql\bin' is not recognized as an internal or external command,
+    -> operable program or batch file.
+    ->
+    -> C:\Users\ashus>cd C:\xampp\mysql\bin;
+ERROR: Unknown command '\U'.
+ERROR: Unknown command '\a'.
+ERROR: Unknown command '\x'.
+ERROR: Unknown command '\m'.
+ERROR: Unknown command '\b'.
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''C:\xampp\mysql\bin' is not recognized as an internal or external command,
+opera' at line 1
+MariaDB [myweb]> The system cannot find the path specified.
+    ->
+    -> C:\Users\ashus>cd
+ERROR: Unknown command '\U'.
+ERROR: Unknown command '\a'.
+    -> C:\Users\ashus
+ERROR: Unknown command '\U'.
+ERROR: Unknown command '\a'.
+    ->
+    -> C:\Users\ashus>cd C:\xampp\mysql\bin
+ERROR: Unknown command '\U'.
+ERROR: Unknown command '\a'.
+ERROR: Unknown command '\x'.
+ERROR: Unknown command '\m'.
+ERROR: Unknown command '\b'.
+    ->
+    -> C:\xampp\mysql\bin>mysql -u root -p
+ERROR: Unknown command '\x'.
+ERROR: Unknown command '\m'.
+ERROR: Unknown command '\b'.
+    -> Enter password:
+    -> Welcome to the MariaDB monitor.  Commands end with ; or \g.
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'The system cannot find the path specified.
+
+C:\Users\ashus>cd
+C:\Users\ashus
+
+C:' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or' at line 1
+    -> Your MariaDB connection id is 8
+    -> Server version: 10.4.11-MariaDB mariadb.org binary distribution
+    ->
+    -> Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+    ->
+    -> Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+    ->
+    -> MariaDB [(none)]> show dvs;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.
+Your MariaDB connection id is 8
+Server version: 10.4.11-MariaDB mariadb.org bi' at line 1
+MariaDB [myweb]> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dvs' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    -> MariaDB [(none)]> show dbs;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'the manual that corresponds to your MariaDB server version for the right syntax ' at line 1
+MariaDB [myweb]> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'dbs' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    -> MariaDB [(none)]> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'the manual that corresponds to your MariaDB server version for the right syntax ' at line 1
+MariaDB [myweb]> +--------------------+
+    -> | Database           |
+    -> +--------------------+
+    -> | information_schema |
+    -> | mysql              |
+    -> | performance_schema |
+    -> | phpmyadmin         |
+    -> | test               |
+    -> +--------------------+
+    -> 5 rows in set (0.275 sec)
+    ->
+    -> MariaDB [(none)]> mysql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+--------------------+
+| Database           |
++--------------------+
+| informati' at line 1
+MariaDB [myweb]> ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mysql' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ERROR 1064 (42000): You have an error in your SQL syntax' at line 1
+    -> MariaDB [(none)]> use mysql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'the manual that corresponds to your MariaDB server version for the right syntax ' at line 1
+MariaDB [myweb]> Database changed
+    -> MariaDB [mysql]> show tables;\
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Database changed
+MariaDB [mysql]> show tables' at line 1
+MariaDB [myweb]> +---------------------------+
+    -> | Tables_in_mysql           |
+    -> +---------------------------+
+    -> | column_stats              |
+    -> | columns_priv              |
+    -> | db                        |
+    -> | event                     |
+    -> | func                      |
+    -> | general_log               |
+    -> | global_priv               |
+    -> | gtid_slave_pos            |
+    -> | help_category             |
+    -> | help_keyword              |
+    -> | help_relation             |
+    -> | help_topic                |
+    -> | index_stats               |
+    -> | innodb_index_stats        |
+    -> | innodb_table_stats        |
+    -> | plugin                    |
+    -> | proc                      |
+    -> | procs_priv                |
+    -> | proxies_priv              |
+    -> | roles_mapping             |
+    -> | servers                   |
+    -> | slow_log                  |
+    -> | table_stats               |
+    -> | tables_priv               |
+    -> | time_zone                 |
+    -> | time_zone_leap_second     |
+    -> | time_zone_name            |
+    -> | time_zone_transition      |
+    -> | time_zone_transition_type |
+    -> | transaction_registry      |
+    -> | user                      |
+    -> +---------------------------+
+    -> 31 rows in set (0.003 sec)
+    ->
+    -> MariaDB [mysql]> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+---------------------------+
+| Tables_in_mysql           |
++-------------------' at line 1
+MariaDB [myweb]> +--------------------+
+    -> | Database           |
+    -> +--------------------+
+    -> | information_schema |
+    -> | mysql              |
+    -> | performance_schema |
+    -> | phpmyadmin         |
+    -> | test               |
+    -> +--------------------+
+    -> 5 rows in set (0.001 sec)
+    ->
+    -> MariaDB [mysql]>
+    -> MariaDB [mysql]>
+    -> MariaDB [mysql]> create database myweb
+    ->     -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+--------------------+
+| Database           |
++--------------------+
+| informati' at line 1
+MariaDB [myweb]> Query OK, 1 row affected (0.885 sec)
+    ->
+    -> MariaDB [mysql]> use myweb;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Query OK, 1 row affected (0.885 sec)
+
+MariaDB [mysql]> use myweb' at line 1
+MariaDB [myweb]> Database changed
+    -> MariaDB [myweb]> create table loginfo(id int auto_increment not null,
+    ->     -> username varchar(20),
+    ->     -> password varchar(20),
+    ->     -> primary key(id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Database changed
+MariaDB [myweb]> create table loginfo(id int auto_increment not' at line 1
+MariaDB [myweb]> Query OK, 0 rows affected (2.371 sec)
+    ->
+    -> MariaDB [myweb]> insert into loginfo values(1,'akshata','Akshata');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Query OK, 0 rows affected (2.371 sec)
+
+MariaDB [myweb]> insert into loginfo valu' at line 1
+MariaDB [myweb]> Query OK, 1 row affected (0.731 sec)
+    ->
+    -> MariaDB [myweb]> select*from loginfo;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Query OK, 1 row affected (0.731 sec)
+
+MariaDB [myweb]> select*from loginfo' at line 1
+MariaDB [myweb]> +----+----------+----------+
+    -> | id | username | password |
+    -> +----+----------+----------+
+    -> |  1 | akshata  | Akshata  |
+    -> +----+----------+----------+
+    -> 1 row in set (0.253 sec)
+    ->
+    -> MariaDB [myweb]> create table contactFrm(name varchar(20),
+    ->     -> email varchar(20),
+    ->     -> mno int,msg varchar(100));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+----+----------+----------+
+| id | username | password |
++----+----------+-----' at line 1
+MariaDB [myweb]> Query OK, 0 rows affected (3.478 sec)
+    ->
+    -> MariaDB [myweb]> select*from contactFrm;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Query OK, 0 rows affected (3.478 sec)
+
+MariaDB [myweb]> select*from contactFrm' at line 1
+MariaDB [myweb]> +------+----------------------+------------+--------+
+    -> | name | email                | mno        | msg    |
+    -> +------+----------------------+------------+--------+
+    -> | ashu | ashu.sanas12@gmail.c | 2147483647 | hghgds |
+    -> +------+----------------------+------------+--------+
+    -> 1 row in set (0.061 sec)
+    ->
+    -> MariaDB [myweb]> create table studreg(id int auto_increment not null,sname varchar(20) not null,
+    ->     -> addr varchar(20) not null,
+    ->     -> zip varchar(20) not null,
+    ->     -> email varchar(20),
+    ->     -> mno int not null,
+    ->     -> city varchar(20) not null,
+    ->     -> state varchar(20) not null,
+    ->     -> country varchar(20) not null,
+    ->     -> gender varchar(20) not null,
+    ->     -> dob date not null,
+    ->     -> quali varchar(20) not null,
+    ->     -> course varchar(20) not null,
+    ->     -> primary key(id));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+------+----------------------+------------+--------+
+| name | email            ' at line 1
+MariaDB [myweb]> Query OK, 0 rows affected (0.987 sec)
+    ->
+    -> MariaDB [myweb]> select*from studreg;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Query OK, 0 rows affected (0.987 sec)
+
+MariaDB [myweb]> select*from studreg' at line 1
+MariaDB [myweb]> +----+---------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+    -> | id | sname   | addr   | zip    | email                | mno        | city        | state       | country | gender | dob        | quali | course    |
+    -> +----+---------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+    -> |  1 | akshata | satara | 415002 | ashu.sanas12@gmail.c | 2147483647 | Navi mumbai | Maharashtra | Default | female | 2021-08-27 | ME    | Fullstack |
+    -> +----+---------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+
+    -> 1 row in set (0.046 sec)
+    ->
+    -> MariaDB [myweb]> select*from studreg;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '+----+---------+--------+--------+----------------------+------------+----------' at line 1
+MariaDB [myweb]> +----+-------+--------+--------+----------------------+------------+-------------+-------------+---------+--------+------------+-------+-----------+

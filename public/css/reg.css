@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.regFrm{
+    background-color: #2d85b0;
+    width: 500px;
+    height: 610px;
+    margin: 0px 0px 0px 400px;
+    color: white;
+    font-size: 18px;
+    padding:20px;
+    border-radius:10px ;
+}
+
+.regFrmmodi{
+    background-color: #2d85b0;
+    width: 500px;
+    height: 400px;
+    margin: 0px 0px 0px 400px;
+    color: white;
+    font-size: 18px;
+    padding:20px;
+    border-radius:10px ;
+    
+}
+#regmr{
+    margin-left: 50px;
+}
+.lb{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-style: normal;
+
+}
+
+#name{
+    width: 230px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+    
+}
+
+#city{
+    width: 230px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    
+    font-family: 'Times New Roman';
+}
+#btn{
+    width: 150px;
+    height: 35px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    font-weight: 600;
+    outline:0;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-right: 10px;
+    
+}
+#field{
+    width: 230px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#quali{
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Times New Roman';
+    margin-top: 5px;
+}
+
+#Course{
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: 'Times New Roman';
+
+}
+#gender{
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: 'Times New Roman';
+}
+
+/*----------Home page css-----*/
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .imghm{
+      position: absolute;
+    left: -100px;
+    width: 90%;
+    
+ margin: 40px 0px 0px 0px;
+    
+    
+  }
+  p{
+    text-align: justify;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+  
+.aboutimg{
+    margin-top: 40px;
+    width:100%;
+    height: 60%;
+}
+
+.imgab{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10;
+    background-color: black;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+.para{
+    text-align: justify;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    
+}
+
+/*----------ourteam------*/
+.ourteam{
+    height:550px;
+    padding: 100px 0px 60px;
+    margin-top: 90px;
+    width: 100%;
+    background-color: lightgray;
+}
+.ourteam h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.teamsetting{
+    margin-top:20px!important;
+}
+
+
+.imgteam{
+    height: 30%;
+    width: 30%;
+}
+/*---------------contact form-------------*/
+.imgcon{
+    position: absolute;
+  left:-50px;
+  bottom: 50px;
+  width: 500px;
+  height: 500px;
+  
+  
+margin: 40px 0px 0px 0px;
+  
+  
+}
+.regCon{
+    background-color: #2d85b0;
+    width: 450px;
+    height: 500px;
+    margin: 0px 0px 0px 400px;
+    color: white;
+    font-size: 18px;
+    padding:20px;
+    border-radius:10px ;
+}
+#cname{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+    
+}

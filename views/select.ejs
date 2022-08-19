@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Student Id</th>
+                    <th>Student Name</th>
+                    <th>Address</th>
+                    <th>Zip</th>
+                    <th>Student Email</th>
+                    <th>Mobile_no</th>
+                    <th> City</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Qualification</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% studs.forEach(function(stud){%>
+                <tr>
+                    <td><%=stud.id%></td>
+                    <td><%=stud.sname%></td>
+                    <td><%=stud.addr%></td>
+                    <td><%=stud.zip%></td>
+                    <td><%=stud.email%></td>
+                    <td><%=stud.mno%></td>
+                    <td><%=stud.city%></td>
+                    <td><%=stud.state%></td>
+                    <td><%=stud.country%></td>
+                    <td><%=stud.gender%></td>
+                    <td><%=stud.dob%></td>
+                    <td><%=stud.quali%></td>
+                    <td><%=stud.course%></td>
+                </tr>
+                <%});%>
+                </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
